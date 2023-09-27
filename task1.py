@@ -5,7 +5,8 @@
 # https://s3.amazonaws.com/arena-attachments/804915/348b48a0cbd967122dcb76f5cc6f5a01.pdf
 """
 This list of lists contains Table 1a Attack Matrix for Clerics, Druids and Monks 
-The index specifies the level of the character, and the entry within the row specifies the target to hit Armor Class with 10 on the far left, and -10 on the far right.
+The index specifies the level of the character, and the entry within the row specifies the target to hit 
+Armor Class with 10 on the far left, and -10 on the far right.
 
 Write a function that finds the target based on the level and the armor class
 Check the assertion tests for expected output.
@@ -36,9 +37,9 @@ table = [
 ]
 
 def target(lvl,ac):
-    return
+    return table[lvl][10 - ac]
 
 def tests():
     assert target(5,7) == 12
-    assert target(10,-10) == 20
-    assert target(17,-3) == 13
+    assert target(10,-10) == 22
+    assert target(17,-3) == 18
